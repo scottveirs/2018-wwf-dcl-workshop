@@ -55,6 +55,8 @@ Organized by WWF Canada | 27 Sep 2018 | Victoria, BC</h4>
        <section class="slide">
       <h2>Early history of U.S. Salish Sea hydrophone networks</h2>
 <table>
+	<col style="width:50%">
+	<col style="width:50%">
 <tr>
 <td>
 	Extracted from <a href="http://www.beamreach.org/2017/01/18/future-hydrophone-networks">Chronology of hydrophones in the Salish Sea</a> (U.S. and Canada, including Johnstone Strait)
@@ -71,8 +73,8 @@ Organized by WWF Canada | 27 Sep 2018 | Victoria, BC</h4>
 </td>
 <td>
 <center>
-	<img src="content/hydrophone-val-kelp.jpg"><p>
-Neptune's fist!
+	<img src="content/sakiosk-map.png"><p>
+	<img src="content/hydrophone-val-kelp.jpg" width="300"><p> Neptune's fist!
 </center>
 </td>
 </tr>
@@ -139,7 +141,7 @@ Neptune's fist!
     </table>
     <div>
 <h3>Vision: Open source software, open data access, real-time engagement of citizen scientists and cloud-computing</h3> 
-	<p>Real-time inspiration: ~5 decades of live-stream pioneering by Orca Lab (Paul Spong and Helena Symonds)</p>
+	<p>Real-time inspiration: ~5 decades of live-stream pioneering by <a href="http://www.orca-live.net/community/index.html">OrcaLive</a> (Paul Spong and Helena Symonds)</p>
       	<p>Thanks to all the backers of the <a href="https://www.kickstarter.com/projects/sveirs/orcasound-listen-for-whales">2017 Kickstarter</a>, plus our app key developers/designers to date:<br>
       Paul Cretu, Skander Mzali, Steve Hicks, Tyler Crisafulli, Nóra Mészáros, Liam Reese, and participants in the 2018 <a href="https://www.democracylab.org/index/?section=AboutProject&id=81">Civic Hackathon</a></p>
       <center>
@@ -225,23 +227,12 @@ Neptune's fist!
     </section>
 
     <section class="slide">
-      <h2>Orcasound app</h2>
-	<h3>Can we make it really easy to listen (with a web app)?</h3>
-	<p>Heroku-hosted web site are implemented in Phoenix/Elixir</p>
-        <img src="content/app-w-activity.png" height="400">
-	<h4><a href="https://github.com/orcasound">Git repositories</a></h4>
-    </section>
-
-    <section class="slide">
-      <h2>Data architecture and flow</h2>
-    </section>
-
-    <section class="slide">
-      <h2>Machine learning challenges aga</h2>
+      <h2>Machine learning challenges (Nov 17 'Hack to give thanks')</h2>
       <ul>
+	<li>Bring citizen scientist real-time detections and classifications into live spectrogram display like <a href="https://birdnet.cornell.edu/live/">Cornell's real-time bird call classifier
         <li>Build training data set of killer whale signals for machine learning</li>
         <ol>
-          <li>Listen to <a href="http://www.orcasound.net/FordOsborneVocabulary/_SouthernVocabularyTable.html">expert's catalog of signals</a> (~40 types of "pulsed calls")</li>
+          <li>Learn from <a href="http://www.orcasound.net/FordOsborneVocabulary/_SouthernVocabularyTable.html">expert's catalog of signals</a> (~40 types of "pulsed calls")</li>
           <li>Clip isolated, clear calls from <a href="http://orcasound.net/data/product/SRKW/greatest-hits/">continuous recordings of wild killer whales</a></li>
         </ol>
         <li>Discuss and implement architecture for machine learning</li>
@@ -252,7 +243,7 @@ Neptune's fist!
           <li>Discuss and access EC2 Linux instance and other relevant services (e.g. Cloud9, Lambda?)</li>
           <li>Build out <a href="https://github.com/orcasound/orcadata">Orcadata Git repository</a>: a docker-based Python analysis environment, or ??</li>
         </ol>
-        <li>Integrate machine learning approach and products into Orcasound app</li>
+        <li><b>Integrate machine learning approaches and products into Orcasound app</a></li>
         <ol>
           <li>Orientation to the app, audio data scheme, and <a href="https://github.com/orcasound/orcasite">Orcasite Git repository</a> (Backend is an Elixir app using the Phoenix framework. The Phoenix app serves a React app.)</li>
           <li>Discuss how algorithmic and human detection (Activity button presses) and classification could work synergistically</li>
@@ -262,7 +253,7 @@ Neptune's fist!
     </section>
 
     <section class="slide">
-      <h2>New version of Ford-Osborne call catalog</h2>
+      <h2>Learning library assets: Ford-Osborne call catalog</h2>
       <ul>
         <li>~2004: Colorado College students built <a href="http://www.orcasound.net/FordOsborneVocabulary/_SouthernVocabularyTable.html">old version</a></li>
         <li>2018: Civic Hackathon particpants building new version using:
@@ -272,20 +263,31 @@ Neptune's fist!
           <li>Python to generate spectrograms from audio data (ideally flac)</li>
         </ol>
       </ul>
+	<h2>Next tools: Bigg's/transient library; common local fish sounds?
     </section>
 
     <section class="slide">
-      <h2>WhoListener</h2>
+      <h2>Historic DC effort: WhoListener</h2>
       <img src="content/wholistener.png">
+	<p>Admiralty Inlet study (unpublished): of 22 SRKW transits, humans detect 45%, Wholistener 64%, combined 77%. (71/79/93 during local daytime)</P>
     </section>
 
     <section class="slide">
-      <h2>Zorbita</h2>
+      <h2>Current DC effort: Zorbita</h2>
       <img src="content/zorbita.png">
     </section>
 
     <section class="slide">
-      <h2>Title</h2>
+      <h2>Questions?</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Orcasound app</h2>
+	<h3>Can we make it really easy to listen (with a web app)?</h3>
+	<p>Heroku-hosted web site implemented in Phoenix/Elixir</p>
+        <img src="content/app-w-activity.png" height="500">
+        <img src="content/app-performance.png" height="300">
+	<h4><a href="https://github.com/orcasound">Git repositories</a></h4>
     </section>
 
 
